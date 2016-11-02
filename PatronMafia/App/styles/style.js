@@ -6,6 +6,9 @@ import {
   BRAND_COLOR
 } from '../components/constants'
 
+var Dimensions = require('Dimensions');
+var windowSize = Dimensions.get('window');
+
 const styles = {
   appWrapper: {
     backgroundColor:'#F1F2F7',
@@ -87,13 +90,17 @@ const styles = {
     color:"rgb(121, 129, 147)",
     marginBottom:5
   },
+  feedScroller: {
+    flex:1,
+    paddingLeft:20,
+    paddingRight:20,
+  },
   feedThumpContainer:{
     marginBottom:15,
-    marginLeft:30,
-    marginRight:30,
+    marginRight:20,
+    width:windowSize.width-80,
   },
   feedThump:{
-
   },
   feedContent:{
     textAlign:'center',
@@ -101,10 +108,7 @@ const styles = {
     marginBottom:15
   },
   feedThumpHeader: {
-    paddingLeft: 30,
-    paddingRight: 30,
-    paddingTop:30,
-    paddingBottom:30,
+    padding: 30,
     borderTopRightRadius:10,
     borderTopLeftRadius:10,
   },
@@ -114,6 +118,7 @@ const styles = {
     paddingTop:15,
     paddingBottom:30,
     borderWidth:1,
+    borderTopWidth:0,
     borderColor:'#C6C8D0',
     backgroundColor:'#ffffff',
     borderBottomRightRadius:10,
@@ -145,7 +150,7 @@ const styles = {
     borderRadius:10,
     borderColor:'#C6C8D0',
     borderWidth:1,
-    padding:10,
+    padding:15,
     flexDirection:'row',
     justifyContent:'center',
     marginBottom:15,
@@ -167,7 +172,12 @@ const styles = {
   tab: {
     // backgroundColor:'#ffffff',
     color:'#A8A9AD',
-  }
+  },
+  PageHeader: {
+    padding:25,
+    // justifyContent:'center',
+    alignItems:'center',
+  },
 };
 
 export default styles;
