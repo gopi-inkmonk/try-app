@@ -32,9 +32,11 @@ export default class HomeFeed extends React.Component {
           </View>
 
           <ScrollView horizontal={true} style={styles.feedScroller}>
+            <FeedCard style={styles.feedThumpContainerFirstChild}/>
             <FeedCard/>
             <FeedCard/>
             <FeedCard/>
+            <FeedCard style={styles.feedThumpContainerLastChild}/>
           </ScrollView>
       </View>
     );

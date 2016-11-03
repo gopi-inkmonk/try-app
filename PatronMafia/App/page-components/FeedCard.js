@@ -29,7 +29,7 @@ import LinearGradient from 'react-native-linear-gradient';
 export default class FeedCard extends React.Component {
   render() {
     return (
-      <TouchableHighlight style={styles.feedThumpContainer}>
+      <TouchableHighlight style={[styles.feedThumpContainer, this.props.style]}>
         <View style={styles.feedThump}>
           <LinearGradient colors={['#EE88E8', '#FF72A0']} style={styles.feedThumpHeader}>
             <Text style={{ ...styles.feedContent, ...styles.feedIndus }}>TRANSPORTATION & LOGISTICS</Text>

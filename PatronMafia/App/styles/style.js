@@ -92,13 +92,17 @@ const styles = {
   },
   feedScroller: {
     flex:1,
-    paddingLeft:20,
-    paddingRight:20,
   },
   feedThumpContainer:{
     marginBottom:15,
     marginRight:20,
     width:windowSize.width-80,
+  },
+  feedThumpContainerFirstChild: {
+    marginLeft:40,
+  },
+  feedThumpContainerLastChild: {
+    marginRight:40,
   },
   feedThump:{
     borderTopRightRadius:10,
