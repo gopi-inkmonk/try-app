@@ -101,6 +101,9 @@ const styles = {
     width:windowSize.width-80,
   },
   feedThump:{
+    borderTopRightRadius:10,
+    borderTopLeftRadius:10,
+    overflow:'hidden',
   },
   feedContent:{
     textAlign:'center',
