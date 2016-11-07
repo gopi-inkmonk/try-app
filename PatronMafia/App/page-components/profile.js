@@ -32,8 +32,8 @@ export default class Profile extends Component {
     return (
       <View>
         <View style={styles.PageHeader}>
-          <Text>
-            Profile
+          <Text style={styles.PageHeaderText}>
+            PROFILE
           </Text>
         </View>
         <TouchableHighlight onPress={ this.expandSection('one') }>

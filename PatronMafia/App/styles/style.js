@@ -166,6 +166,20 @@ const styles = {
     borderColor:'#E5525C',
     marginBottom:0,
   },
+  primaryButton: {
+    backgroundColor:'#E5525C',
+    borderRadius:10,
+    marginTop:15,
+    borderWidth:1,
+    borderColor:'#E5525C',
+  },
+  secondaryButton: {
+    backgroundColor:'#FFFFFF',
+    borderColor:'#C6C8D0',
+    borderWidth:1,
+    borderRadius:10,
+    marginTop:15,
+  },
   feedBtnText: {
     color:'#52545B',
     paddingLeft:5,
@@ -182,8 +196,21 @@ const styles = {
   },
   PageHeader: {
     padding:25,
-    // justifyContent:'center',
     alignItems:'center',
+  },
+  PageHeaderText: {
+    fontWeight:'bold',
+  },
+  contentContainer: {
+    backgroundColor:'#FFFFFF',
+    flex:1,
+    paddingTop:25,
+    paddingBottom:25,
+    paddingLeft:5,
+    paddingRight:5,
+  },
+  textArea: {
+    height:100,
   },
 };
 
