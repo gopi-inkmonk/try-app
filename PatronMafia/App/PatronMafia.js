@@ -3,9 +3,10 @@ import {
   Text,
   View,
   Navigator,
-  TouchableHighlight,
   ScrollView,
 } from 'react-native';
+
+import SmTouchable from './components/SmTouchable';
 
 import styles from './styles/style.js';
 import Icon from './components/Icon';
@@ -18,7 +19,7 @@ import PostHassle from './page-components/post-hassle'
 
 export default class PatronMafia extends PureComponent {
   state = {
-    currentTab: 'home'
+    currentTab: 'profile'
   }
   switchTab = tab => () => {
     this.setState({
@@ -33,33 +34,41 @@ export default class PatronMafia extends PureComponent {
       <View style={styles.appWrapper}>
         <CustomStatusBar/>
         <View style={styles.heroTab}>
-          <TouchableHighlight style={styles.tabIconHolder} onPress={ this.switchTab("home") }>
+          <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("home") }>
             <Icon style={{...styles.tabIcon, ...getActiveStyle('home') }} name="home"></Icon>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.tabIconHolder} onPress={ this.switchTab("customize_feed") }>
+          </SmTouchable>
+          <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("customize_feed") }>
             <Icon style={{ ...styles.tabIcon, ...getActiveStyle('customize_feed') }} name="sliders"></Icon>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.tabIconHolder} onPress={ this.switchTab("profile") }>
+          </SmTouchable>
+          <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("profile") }>
             <Icon style={{ ...styles.tabIcon, ...getActiveStyle('profile') }} name="user"></Icon>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.tabIconHolder} onPress={ this.switchTab("post_hassle") }>
+          </SmTouchable>
+          <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("post_hassle") }>
             <Icon style={{...styles.tabIcon, ...styles.plusCircle, ...getActiveStyle('post_hassle'), }} name="plus-circle"></Icon>
-          </TouchableHighlight>
+          </SmTouchable>
         </View>
-        <ScrollView style={styles.containerWrapper}>
-          {currentTab === 'home' && (
+
+        {currentTab === 'home' && (
+          <ScrollView style={{...styles.containerWrapper, ...styles.homeBG}}>
             <HomeFeed/>
-          )}
-          {currentTab === 'customize_feed' && (
+          </ScrollView>
+        )}
+        {currentTab === 'customize_feed' && (
+          <ScrollView style={styles.containerWrapper}>
             <CustomizeFeed/>
-          )}
-          {currentTab === 'profile' && (
+          </ScrollView>
+        )}
+        {currentTab === 'profile' && (
+          <ScrollView style={styles.containerWrapper}>
             <Profile/>
-          )}
-          {currentTab === 'post_hassle' && (
+          </ScrollView>
+        )}
+        {currentTab === 'post_hassle' && (
+          <ScrollView style={styles.containerWrapper}>
             <PostHassle/>
-          )}
-        </ScrollView>
+          </ScrollView>
+        )}
+
       </View>
     )
   }

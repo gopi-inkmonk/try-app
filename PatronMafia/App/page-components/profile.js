@@ -2,33 +2,14 @@ import React, { Component } from 'react';
 import {
   Text,
   View,
-  TouchableHighlight,
-  Modal,
-  Navigator,
 } from 'react-native';
-
+import SmTouchable from '../components/SmTouchable';
 import styles from '../styles/style.js';
+import Icon from '../components/Icon';
 
 export default class Profile extends Component {
-  state = {
-    expandedSection: null,
-  }
-  expandSection = sectionName => () => {
-    const { expandedSection } = this.state
-    if (expandedSection === sectionName) {
-      this.setState({
-        expandedSection: null
-      })
-    }
-    else {
-      this.setState({
-        expandedSection: sectionName
-      })
-    }
-  }
-  render() {
-    const { expandedSection } = this.state
 
+  render() {
     return (
       <View>
         <View style={styles.PageHeader}>
@@ -36,30 +17,53 @@ export default class Profile extends Component {
             PROFILE
           </Text>
         </View>
-        <TouchableHighlight onPress={ this.expandSection('one') }>
-          <Text>Link 1</Text>
-        </TouchableHighlight>
-        {expandedSection === 'one' && (
-          <View>
-            <Text>one</Text>
+
+        <View style={styles.contentContainer}>
+          <View style={styles.wrapperLabelWrapper}>
+            <Text style={styles.wrapperLabel}>PROFILE COMPLETENESS</Text>
+            <Text style={{...styles.wrapperLabel, ...styles.bold}}>50%</Text>
           </View>
-        )}
-        <TouchableHighlight onPress={ this.expandSection('two') }>
-          <Text>Link 2</Text>
-        </TouchableHighlight>
-        {expandedSection === 'two' && (
-          <View>
-            <Text>two</Text>
-          </View>
-        )}
-        <TouchableHighlight onPress={ this.expandSection('three') }>
-          <Text>Link 3</Text>
-        </TouchableHighlight>
-        {expandedSection === 'three' && (
-          <View>
-            <Text>three</Text>
-          </View>
-        )}
+
+          <SmTouchable>
+            <View style={styles.customList}>
+              <View style={styles.customListContentHolder}>
+                <Text style={styles.customListText}>Account</Text>
+                <Text style={{...styles.statusText, ...styles.maxColor}}>PROFILE COMPLETENESS 100%</Text>
+              </View>
+              <Icon style={styles.customListIcon} name="angle-right"></Icon>
+            </View>
+          </SmTouchable>
+
+          <SmTouchable>
+            <View style={styles.customList}>
+              <View style={styles.customListContentHolder}>
+                <Text style={styles.customListText}>Personal Information</Text>
+                <Text style={{...styles.statusText, ...styles.midColor}}>PROFILE COMPLETENESS 50%</Text>
+              </View>
+              <Icon style={styles.customListIcon} name="angle-right"></Icon>
+            </View>
+          </SmTouchable>
+
+          <SmTouchable>
+            <View style={styles.customList}>
+              <View style={styles.customListContentHolder}>
+                <Text style={styles.customListText}>Professional Information</Text>
+                <Text style={{...styles.statusText, ...styles.midColor}}>PROFILE COMPLETENESS 50%</Text>
+              </View>
+              <Icon style={styles.customListIcon} name="angle-right"></Icon>
+            </View>
+          </SmTouchable>
+
+          <SmTouchable>
+            <View style={styles.customList}>
+              <View style={styles.customListContentHolder}>
+                <Text style={styles.customListText}>Other Information</Text>
+                <Text style={{...styles.statusText, ...styles.minColor}}>PROFILE COMPLETENESS 0%</Text>
+              </View>
+              <Icon style={styles.customListIcon} name="angle-right"></Icon>
+            </View>
+          </SmTouchable>
+        </View>
       </View>
     );
   }

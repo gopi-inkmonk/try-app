@@ -69,6 +69,9 @@ const styles = {
   },
   containerWrapper: {
     flex: 1,
+    backgroundColor:'#FFFFFF',
+  },
+  homeBG: {
     backgroundColor:'#F1F2F7',
   },
   button:{
@@ -197,9 +200,11 @@ const styles = {
   PageHeader: {
     padding:25,
     alignItems:'center',
+    backgroundColor:'#F1F2F7',
   },
   PageHeaderText: {
     fontWeight:'bold',
+    color:'#52545B',
   },
   contentContainer: {
     backgroundColor:'#FFFFFF',
@@ -222,12 +227,49 @@ const styles = {
   },
   customListText: {
     fontSize:16,
-    flex:1,
+    color:'#52545B',
   },
   customListContent: {
     marginLeft:15,
     marginRight:15,
-  }
+  },
+  customListContentHolder: {
+    flex:1,
+  },
+  wrapperLabelWrapper: {
+    marginBottom:15,
+    flexDirection:'row',
+    justifyContent:'center',
+  },
+  wrapperLabel: {
+    fontSize:12,
+    paddingRight:3,
+    paddingLeft:3,
+    color:'#52545B',
+  },
+  bold: {
+    fontWeight:'bold',
+  },
+  customList: {
+    flexDirection:'row',
+    padding:15,
+  },
+  customListContentHolder: {
+    flex:1,
+  },
+  statusText:{
+    fontSize:12,
+    fontWeight:'bold',
+  },
+  minColor:{
+    color:'#E12828',
+  },
+  midColor:{
+    color:'#E1C028',
+  },
+  maxColor:{
+    color:'#5FC281',
+  },
 };
 
 export default styles;

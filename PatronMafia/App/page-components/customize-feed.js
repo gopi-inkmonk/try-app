@@ -81,8 +81,27 @@ export default class CustomizeFeed extends React.Component {
             </View>
           </SmTouchable>
           {expandedSection === 'two' && (
-            <View>
-              <Text>two</Text>
+            <View style={styles.customListContent}>
+              <CheckBox
+                title='Click Here'
+                checked={this.state.checked}
+              />
+              <CheckBox
+                title='Click Here'
+                checked={this.state.checked}
+              />
+              <CheckBox
+                title='Click Here'
+                checked={this.state.checked}
+              />
+              <CheckBox
+                title='Click Here'
+                checked={this.state.checked}
+              />
+              <CheckBox
+                title='Click Here'
+                checked={this.state.checked}
+              />
             </View>
           )}
           <SmTouchable onPress={ this.expandSection('three') }>
@@ -92,8 +111,27 @@ export default class CustomizeFeed extends React.Component {
             </View>
           </SmTouchable>
           {expandedSection === 'three' && (
-            <View>
-              <Text>three</Text>
+            <View style={styles.customListContent}>
+              <CheckBox
+                title='Click Here'
+                checked={this.state.checked}
+              />
+              <CheckBox
+                title='Click Here'
+                checked={this.state.checked}
+              />
+              <CheckBox
+                title='Click Here'
+                checked={this.state.checked}
+              />
+              <CheckBox
+                title='Click Here'
+                checked={this.state.checked}
+              />
+              <CheckBox
+                title='Click Here'
+                checked={this.state.checked}
+              />
             </View>
           )}
         </View>
