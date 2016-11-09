@@ -19,7 +19,7 @@ import PostHassle from './page-components/post-hassle'
 
 export default class PatronMafia extends PureComponent {
   state = {
-    currentTab: 'profile'
+    currentTab: 'home'
   }
   switchTab = tab => () => {
     this.setState({
