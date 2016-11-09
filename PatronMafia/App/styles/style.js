@@ -212,6 +212,22 @@ const styles = {
   textArea: {
     height:100,
   },
+  customList: {
+    flexDirection:'row',
+    padding:10,
+  },
+  customListIcon: {
+    fontSize:16,
+    width:15,
+  },
+  customListText: {
+    fontSize:16,
+    flex:1,
+  },
+  customListContent: {
+    marginLeft:15,
+    marginRight:15,
+  }
 };
 
 export default styles;

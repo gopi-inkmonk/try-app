@@ -36,27 +36,27 @@ export default class PatronMafia extends PureComponent {
           <TouchableHighlight style={styles.tabIconHolder} onPress={ this.switchTab("home") }>
             <Icon style={{...styles.tabIcon, ...getActiveStyle('home') }} name="home"></Icon>
           </TouchableHighlight>
-          <TouchableHighlight style={styles.tabIconHolder} onPress={ this.switchTab("sliders") }>
-            <Icon style={{ ...styles.tabIcon, ...getActiveStyle('sliders') }} name="sliders"></Icon>
+          <TouchableHighlight style={styles.tabIconHolder} onPress={ this.switchTab("customize_feed") }>
+            <Icon style={{ ...styles.tabIcon, ...getActiveStyle('customize_feed') }} name="sliders"></Icon>
           </TouchableHighlight>
-          <TouchableHighlight style={styles.tabIconHolder} onPress={ this.switchTab("user") }>
-            <Icon style={{ ...styles.tabIcon, ...getActiveStyle('user') }} name="user"></Icon>
+          <TouchableHighlight style={styles.tabIconHolder} onPress={ this.switchTab("profile") }>
+            <Icon style={{ ...styles.tabIcon, ...getActiveStyle('profile') }} name="user"></Icon>
           </TouchableHighlight>
-          <TouchableHighlight style={styles.tabIconHolder} onPress={ this.switchTab("plus-circle") }>
-            <Icon style={{...styles.tabIcon, ...styles.plusCircle, ...getActiveStyle('plus-circle'), }} name="plus-circle"></Icon>
+          <TouchableHighlight style={styles.tabIconHolder} onPress={ this.switchTab("post_hassle") }>
+            <Icon style={{...styles.tabIcon, ...styles.plusCircle, ...getActiveStyle('post_hassle'), }} name="plus-circle"></Icon>
           </TouchableHighlight>
         </View>
         <ScrollView style={styles.containerWrapper}>
           {currentTab === 'home' && (
             <HomeFeed/>
           )}
-          {currentTab === 'sliders' && (
+          {currentTab === 'customize_feed' && (
             <CustomizeFeed/>
           )}
-          {currentTab === 'user' && (
+          {currentTab === 'profile' && (
             <Profile/>
           )}
-          {currentTab === 'plus-circle' && (
+          {currentTab === 'post_hassle' && (
             <PostHassle/>
           )}
         </ScrollView>
