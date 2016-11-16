@@ -4,6 +4,7 @@ import {
   View,
   Navigator,
   ScrollView,
+  TouchableHighlight
 } from 'react-native';
 
 import SmTouchable from './components/SmTouchable';
@@ -34,18 +35,34 @@ export default class PatronMafia extends PureComponent {
       <View style={styles.appWrapper}>
         <CustomStatusBar/>
         <View style={styles.heroTab}>
-          <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("home") }>
-            <Icon style={{...styles.tabIcon, ...getActiveStyle('home') }} name="home"></Icon>
-          </SmTouchable>
-          <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("customize_feed") }>
-            <Icon style={{ ...styles.tabIcon, ...getActiveStyle('customize_feed') }} name="sliders"></Icon>
-          </SmTouchable>
-          <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("profile") }>
-            <Icon style={{ ...styles.tabIcon, ...getActiveStyle('profile') }} name="user"></Icon>
-          </SmTouchable>
-          <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("post_hassle") }>
-            <Icon style={{...styles.tabIcon, ...styles.plusCircle, ...getActiveStyle('post_hassle'), }} name="plus-circle"></Icon>
-          </SmTouchable>
+          <View style={{ height: 50, flex: 1 }}>
+            <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("home") }>
+              <View style={{flex:1, }}>
+                <Icon style={{...styles.tabIcon, ...getActiveStyle('home') }} name="home"></Icon>
+              </View>
+            </SmTouchable>
+          </View>
+          <View style={{ height: 50, flex: 1 }}>
+            <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("customize_feed") }>
+              <View style={{flex:1, }}>
+                <Icon style={{ ...styles.tabIcon, ...getActiveStyle('customize_feed') }} name="sliders"></Icon>
+              </View>
+            </SmTouchable>
+          </View>
+          <View style={{ height: 50, flex: 1 }}>
+            <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("profile") }>
+              <View style={{flex:1, }}>
+                <Icon style={{ ...styles.tabIcon, ...getActiveStyle('profile') }} name="user"></Icon>
+              </View>
+            </SmTouchable>
+          </View>
+          <View style={{ height: 50, flex: 1 }}>
+            <SmTouchable style={styles.tabIconHolder} onPress={ this.switchTab("post_hassle") }>
+              <View style={{flex:1, }}>
+                <Icon style={{...styles.tabIcon, ...styles.plusCircle, ...getActiveStyle('post_hassle'), }} name="plus-circle"></Icon>
+              </View>
+            </SmTouchable>
+          </View>
         </View>
 
         {currentTab === 'home' && (

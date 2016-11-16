@@ -22,17 +22,17 @@ const styles = {
   heroTab: {
     flexDirection:'row',
     backgroundColor:'#ffffff',
+    height:50,
   },
   tabIconHolder: {
     flex: 1,
-    height:50,
   },
   tabIcon: {
     flex: 1,
-    textAlign:'center',
     fontSize:18,
     padding:15,
     color:'#A8A9AD',
+    textAlign:'center',
   },
   plusCircle: {
     color:'#E5525C'
@@ -104,6 +104,13 @@ const styles = {
   feedThumpContainerFirstChild: {
     marginLeft:40,
   },
+  feedThumpActive: {
+    marginLeft:0,
+    position:'absolute',
+    flex:1,
+    width:windowSize.width,
+    zIndex:9,
+  },
   feedThumpContainerLastChild: {
     marginRight:40,
   },
@@ -115,12 +122,44 @@ const styles = {
   feedContent:{
     textAlign:'center',
     color:'#ffffff',
-    marginBottom:15
+    marginBottom:15,
+    backgroundColor: 'transparent',
   },
   feedThumpHeader: {
     padding: 30,
     borderTopRightRadius:10,
     borderTopLeftRadius:10,
+  },
+  feedPopupHeader: {
+    borderTopRightRadius:0,
+    borderTopLeftRadius:0,
+  },
+  formWrapper: {
+    padding:15,
+  },
+  popupHeader:{
+    flexDirection:'row',
+  },
+  popupHeaderCTA:{
+    flexDirection:'row',
+    backgroundColor:'#F1F2F7',
+    padding:25,
+  },
+  popupContent:{
+    paddingLeft: 30,
+    paddingRight: 30,
+    paddingTop:15,
+  },
+  popupFeedText:{
+    fontSize:18,
+    marginBottom:24,
+    lineHeight:24,
+  },
+  feedPopupFooter:{
+    paddingLeft: 30,
+    paddingRight: 30,
+    paddingTop:15,
+    paddingBottom:30,
   },
   feedThumpFooter: {
     paddingLeft: 30,
@@ -201,10 +240,16 @@ const styles = {
     padding:25,
     alignItems:'center',
     backgroundColor:'#F1F2F7',
+    flex:1,
+  },
+  PageHeaderLRPD: {
+    paddingLeft:0,
+    paddingRight:0,
   },
   PageHeaderText: {
     fontWeight:'bold',
     color:'#52545B',
+    textAlign:'center',
   },
   contentContainer: {
     backgroundColor:'#FFFFFF',
